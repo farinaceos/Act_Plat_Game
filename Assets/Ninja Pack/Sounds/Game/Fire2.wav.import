@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhuab0nrt7mob"
+path="res://.godot/imported/Fire2.wav-d3d27bf71e2dfee0fdf66974ea6a4587.sample"
+
+[deps]
+
+source_file="res://Assets/Ninja Pack/Sounds/Game/Fire2.wav"
+dest_files=["res://.godot/imported/Fire2.wav-d3d27bf71e2dfee0fdf66974ea6a4587.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

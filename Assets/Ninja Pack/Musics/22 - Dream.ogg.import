@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cyfn0uiaym7ya"
+path="res://.godot/imported/22 - Dream.ogg-61191faa84c5176315ef6018deaede3f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Ninja Pack/Musics/22 - Dream.ogg"
+dest_files=["res://.godot/imported/22 - Dream.ogg-61191faa84c5176315ef6018deaede3f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

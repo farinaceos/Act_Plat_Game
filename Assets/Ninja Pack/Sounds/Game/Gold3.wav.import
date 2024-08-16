@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgawnqatycqsg"
+path="res://.godot/imported/Gold3.wav-3ff226c86dcd279a7074fe8fe5cc1cdb.sample"
+
+[deps]
+
+source_file="res://Assets/Ninja Pack/Sounds/Game/Gold3.wav"
+dest_files=["res://.godot/imported/Gold3.wav-3ff226c86dcd279a7074fe8fe5cc1cdb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -86,6 +86,8 @@
 
 **For development, may use ninja assets pack**
 <a href='https://pixel-boy.itch.io/ninja-adventure-asset-pack'> NINJA PACK</a>
+
+Other assets were added to this project to try and figure the style that i'm going.
 			
 ## Game Development Notes
 
@@ -94,6 +96,11 @@
 * The Game Scope may be too wide for a second project. This is expected. The challenge is to be able to develop this game with my knowledge and to find the required knowledge to develop what I won't be able to do at the moment.
 
 * This project is expected to have a deadline in the way that it doesn't become an infinite project. This deadline will be decided and added in this document
+
+---
+### 
+
+* 16/08/24 - Added Playable Character, messed around with animations, managed to create walk, idle and falling animations, still trying to figure the jump + falling animation and attack on command.
 
 
 ![Peace was never an option](https://i.imgur.com/x5q2fF5.jpeg "Thank you for reading" )\

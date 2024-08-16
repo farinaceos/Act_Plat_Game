@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dp3l1t0thraw0"
+path="res://.godot/imported/Success3.wav-6d5002ed9b5bd28c983321b50c35930d.sample"
+
+[deps]
+
+source_file="res://Assets/Ninja Pack/Sounds/Game/Success3.wav"
+dest_files=["res://.godot/imported/Success3.wav-6d5002ed9b5bd28c983321b50c35930d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

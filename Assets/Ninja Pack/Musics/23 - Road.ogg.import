@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://db58o8oyn2r5t"
+path="res://.godot/imported/23 - Road.ogg-3a1fe7c3458f0383b5d7d1ec250e025f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Ninja Pack/Musics/23 - Road.ogg"
+dest_files=["res://.godot/imported/23 - Road.ogg-3a1fe7c3458f0383b5d7d1ec250e025f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

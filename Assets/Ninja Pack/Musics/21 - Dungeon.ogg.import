@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xrkl2kvbpyha"
+path="res://.godot/imported/21 - Dungeon.ogg-24ac20a96491d593c540d164a73ab406.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Ninja Pack/Musics/21 - Dungeon.ogg"
+dest_files=["res://.godot/imported/21 - Dungeon.ogg-24ac20a96491d593c540d164a73ab406.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
