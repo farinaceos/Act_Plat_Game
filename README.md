@@ -102,6 +102,9 @@ Other assets were added to this project to try and figure the style that i'm goi
 
 * 16/08/24 - Added Playable Character, messed around with animations, managed to create walk, idle and falling animations, still trying to figure the jump + falling animation and attack on command.
 
+* 16/08/24 - Scraped it all out. Created from zero new concept of MC
+
+* 17/08/24 - New Player Animations implemented, separated weapon node implemented, this allows for future improvements. TO-DO: Work on hurtbox and health management
 
 ![Peace was never an option](https://i.imgur.com/x5q2fF5.jpeg "Thank you for reading" )\
 Thanks for Reading ❤️

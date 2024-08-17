@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://ceu06egkw8suv"]
+[gd_scene load_steps=30 format=3 uid="uid://ceu06egkw8suv"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_mdr54"]
 [ext_resource type="Texture2D" uid="uid://dkh5sdvn44m1k" path="res://Assets/Ninja Pack/Actor/Characters/NinjaRed/SpriteSheet.png" id="1_x41rw"]
 [ext_resource type="PackedScene" uid="uid://c84ncvedcpdha" path="res://Scenes/sword.tscn" id="3_ad40k"]
+[ext_resource type="Script" path="res://Scripts/hurtbox.gd" id="3_inmxl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rt7r3"]
 atlas = ExtResource("1_x41rw")
@@ -145,7 +146,220 @@ size = Vector2(180, 231)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ep6o0"]
 radius = 81.0247
 
+[sub_resource type="Animation" id="Animation_mvr8n"]
+resource_name = "attack_down"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("weapon:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("weapon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(263.175, 316.99), Vector2(199.46, 339.495), Vector2(133.71, 314.835)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("weapon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.253073, 2.90772]
+}
+
+[sub_resource type="Animation" id="Animation_rxgfk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("weapon:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("weapon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(205, 304)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("weapon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.253073]
+}
+
+[sub_resource type="Animation" id="Animation_ofggd"]
+resource_name = "attack_left"
+length = 0.2
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0969503, 0.199952),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(132, 281), Vector2(94.935, 261.773), Vector2(105.745, 241.345)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("weapon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.199952),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.55505, 4.20973]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("weapon:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.199952),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_gb4ir"]
+resource_name = "attack_right"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("weapon:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("weapon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(265, 316), Vector2(314.53, 293.5), Vector2(318, 271)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("weapon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.806342, -1.49314]
+}
+
+[sub_resource type="Animation" id="Animation_kuywf"]
+resource_name = "attack_up"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(145.515, 72.675), Vector2(212.585, 55.912), Vector2(279.655, 74.13)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("weapon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.26202, 5.62694]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("weapon:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_46um8"]
+_data = {
+"RESET": SubResource("Animation_rxgfk"),
+"attack_down": SubResource("Animation_mvr8n"),
+"attack_left": SubResource("Animation_ofggd"),
+"attack_right": SubResource("Animation_gb4ir"),
+"attack_up": SubResource("Animation_kuywf")
+}
+
 [node name="player" type="CharacterBody2D"]
+scale = Vector2(0.303619, 0.303619)
 script = ExtResource("1_mdr54")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -159,6 +373,7 @@ position = Vector2(201, 212)
 shape = SubResource("RectangleShape2D_pjlun")
 
 [node name="hurtbox" type="Area2D" parent="."]
+script = ExtResource("3_inmxl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2(202, 251)
@@ -166,8 +381,17 @@ shape = SubResource("CircleShape2D_ep6o0")
 
 [node name="weapon" type="Node2D" parent="."]
 visible = false
+position = Vector2(205, 304)
+rotation = 0.253073
 
 [node name="sword" parent="weapon" instance=ExtResource("3_ad40k")]
-position = Vector2(282, 304)
+position = Vector2(33.9221, -2.30035)
 rotation = -4.35762
 scale = Vector2(7.73412, 7.78721)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_46um8")
+}
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
