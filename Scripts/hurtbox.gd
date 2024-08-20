@@ -1,13 +1,16 @@
 class_name HurtBox extends Area2D
 
-
-
-
-# Called when the node enters the scene tree for the first time.
+func _init() -> void:
+	collision_layer = 0
+	collision_mask = 2
+	
 func _ready() -> void:
-	pass # Replace with function body.
+	connect("area_entered", self._on_area_entered)
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_area_entered(Hitbox : hitbox) -> void:
+	if Hitbox == null:
+		return
+		
+	if owner.has_method("take_damage"):
+		owner.take_damage(Hitbox.damage)

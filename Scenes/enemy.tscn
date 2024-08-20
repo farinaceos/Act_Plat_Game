@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://b7b76nsx7seac"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_b8gsm"]
+[ext_resource type="Script" path="res://Scripts/hurtbox.gd" id="1_n6vvx"]
+[ext_resource type="Texture2D" uid="uid://kxid04mw5rxc" path="res://Assets/Ninja Pack/Actor/Monsters/Snake/Snake.png" id="2_cguic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avo51"]
+size = Vector2(21, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lddm6"]
+atlas = ExtResource("2_cguic")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhkhe"]
+atlas = ExtResource("2_cguic")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doa7c"]
+atlas = ExtResource("2_cguic")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsn3q"]
+atlas = ExtResource("2_cguic")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tywqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lddm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhkhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doa7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsn3q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3c62"]
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_b8gsm")
+
+[node name="HurtBox" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+script = ExtResource("1_n6vvx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(15.5, 17)
+shape = SubResource("RectangleShape2D_avo51")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, 17)
+scale = Vector2(1.4375, 1.4375)
+sprite_frames = SubResource("SpriteFrames_tywqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, 18)
+shape = SubResource("CircleShape2D_w3c62")

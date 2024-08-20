@@ -106,5 +106,7 @@ Other assets were added to this project to try and figure the style that i'm goi
 
 * 17/08/24 - New Player Animations implemented, separated weapon node implemented, this allows for future improvements. TO-DO: Work on hurtbox and health management
 
+* 20/08/20 - Completely misused the git branch feature, but managed to finish a hitbox on the sword and hurtbox on one base enemy. Now, back to planning on the course of the game, isometric 2D or platformer as first intended?
+
 ![Peace was never an option](https://i.imgur.com/x5q2fF5.jpeg "Thank you for reading" )\
 Thanks for Reading ❤️
