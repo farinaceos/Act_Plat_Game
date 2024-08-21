@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/HelloWorld.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/farin/Documents/Act_Plat_Game/Recordings/Rec.avi"
+
 [input]
 
 attack={

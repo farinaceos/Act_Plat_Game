@@ -30,16 +30,17 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("attack"):
 		$AnimationPlayer.play("attack_" + animDir) # Cool solution to use the move direction in the animation
 	
-func hurt(value: int):
-	print("I've been hurt!" + str(value) + " health lost")
-	
+func take_damage(damage: int):
+	print("I've been hurt!" + str(damage) + " health lost")
+	health -= damage
 	if health <= 0:
 		health = 0
 		print("You Died")
 	else:
 		print("Ouch")
+	print(health)
 
 # Stop Point 17/08/24 - Work on damage receiving
-
-func _on_hurtbox_body_entered(body: Node2D) -> void:
-	pass
+#
+#func _on_hurtbox_body_entered(body: Node2D) -> void:
+	#pass
